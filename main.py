@@ -10,8 +10,8 @@ engine = pyttsx3.init()
 newsapi = "2996705e68164cb9a86f35556a22e597"
 
 def speak(text):
-    print("[JARVIS REPLY]:", text)   # Jarvis ka reply kya aya show karta hai.
-    engine = pyttsx3.init("sapi5")   # fresh engine each time
+    print("[JARVIS REPLY]:", text)   # It shows what reply Jarvis gives.
+    engine = pyttsx3.init("sapi5")   # fresh engine each time.
     engine.say(text)
     engine.runAndWait()
 
@@ -57,7 +57,6 @@ def processCommand(c):
 
 
     elif "news" in c.lower():
-        # r = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&apikey={newsapi}")
         r = requests.get(f"https://newsapi.org/v2/top-headlines?sources=bbc-news&apikey={newsapi}")
         print("API Response Code:", r.status_code)
 
@@ -95,7 +94,7 @@ if __name__ == "__main__":
                 audio = r.listen(source, timeout=3, phrase_time_limit=3)
 
             word = r.recognize_google(audio)
-            print(f"[DEBUG] Recognizer heard: {word}")    # ye apun kya bol rahe hai wo show karega
+            print(f"[DEBUG] Recognizer heard: {word}")    # It shows what we say.
 
             if "jarvis" in word.lower():
                 speak("Ya")
