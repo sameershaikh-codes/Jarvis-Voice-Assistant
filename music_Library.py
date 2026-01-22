@@ -5,5 +5,4 @@ music = {
 
         "superman " : "https://www.youtube.com/shorts/TptcW8umyzk?feature=share",
 
-        "saiyaara" : "https://youtu.be/BSJa1UytM8w?si=Z-CZCmAwdCduS2UQ"
 }
